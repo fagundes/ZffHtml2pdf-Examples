@@ -13,5 +13,6 @@
 return [
     'Zend\Router',
     'Zend\Validator',
+    'Zff\\Html2Pdf',
     'Application',
 ];
