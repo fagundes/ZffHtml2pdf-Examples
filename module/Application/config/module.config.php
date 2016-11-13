@@ -34,11 +34,22 @@ return [
                     ],
                 ],
             ],
+            'example' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/example[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\ExampleController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\ExampleController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
