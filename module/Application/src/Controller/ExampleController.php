@@ -52,4 +52,21 @@ class ExampleController extends AbstractActionController
 
         return $html2pdfModel;
     }
+
+    public function example03Action()
+    {
+        $html2pdfModel = new Html2PdfModel();
+        $html2pdfModel->setHtml2PdfOptions([
+            'orientation' => 'P',
+            'format'      => 'A4',
+            'lang'        => 'fr',
+            'unicode'     => true,
+            'encoding'    => 'UTF-8',
+            'margins'     => 3
+        ]);
+        $html2pdfModel->setFilename('exemple03.pdf');
+//        $html2pdf->pdf->SetDisplayMode('fullpage');
+
+        return $html2pdfModel;
+    }
 }
